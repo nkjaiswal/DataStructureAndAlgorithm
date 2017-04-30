@@ -27,11 +27,13 @@ int run();
 //////////////////////////////////////////////////////////////////////////////////////////////
 int main(){
 	int ret;
+	char c;
 	autoInc = 0;
 	srand(time(NULL));
-	printf("\n\n\n\n\n\n\n\n\n\n-------------------------------------\nNishantSoft v0.1\nC/C++ Pre compiled Data Structure & Algorithm\nnishant.soft04@gmail.com\nStarted\n-------------------------------------\n");
-	ret = run();	//user need to do the task in __main, instead of main
-	printf("\n-------------------------------------\nSystem is Exiting\nNishantSoft v0.1\n-------------------------------------\n\n\n\n\n\n\n\n\n\n");
+	printf("\n\n\n\n\n\n\n\n\n\n-------------------------------------\nNishantSoft v0.1\nC/C++ Pre compiled Data Structure & Algorithm\nnishant.soft04@gmail.com\nStarted\n-------------------------------------\n\n\n\n");
+	ret = run();	//user need to do the task in run(), instead of main
+	printf("\n\n\n\n-------------------------------------\nSystem is Exiting\nNishantSoft v0.1\n-------------------------------------\n\n\n\n\n\n\n\n\n\nPress Any Key To Continue...");
+	scanf("%c",&c);
 	return ret;
 }
 
@@ -77,6 +79,24 @@ int getData(int input_source){
 	return val;
 }
 
+void getFilledArray(int input_source,int arr[], int size){
+	int i;
+	for(i=0;i<size;i++){
+		arr[i] = getData(input_source);
+	}
+}
+
+void print_array(int arr[], int n){
+	int i;
+	printf("Array: ");
+	for(i=0;i<n;i++){
+		if(i == n-1){
+			printf("%d\n", arr[i]);
+		}else{
+			printf("%d, ", arr[i]);
+		}
+	}
+}
 //////////////////////////////////////////////////////////////////////////////////////////////
 //									LINKED LIST												//
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -332,3 +352,50 @@ void print_tree_level_wise(struct tree_node* tree){
 	print_queue(q);
 }
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//									STOCK BUY SELL PROBLEM									//
+//////////////////////////////////////////////////////////////////////////////////////////////
+void find_best_buy_sell_day_for_stock(int price[],int n){
+	int i,lmax=0,lmin=0;
+	for(i=1;i<n;i++){
+		if(price[i]<price[i-1]){
+			printf("\nBuy on Day %d and Sell on Day %d",lmin,lmax);
+			lmax = i;
+			lmin = i;
+		}
+		if(price[i]>price[i-1])
+			lmax = i;
+	}
+	printf("\nBuy on Day %d and Sell on Day %d",lmin,lmax);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//									Pivot Element Finding									//
+//////////////////////////////////////////////////////////////////////////////////////////////
+void find_pivot_element(int data[],int n){
+	int pvt[n];
+	int i, lmax=data[0], lmin=data[n-1];
+
+	for(i=0;i<n;i++){
+		pvt[i] = 0;
+		if(data[i]>=lmax){
+			pvt[i]++;
+			lmax = data[i];
+		}
+	}
+	for(i=n-1;i>=0;i--){
+		if(data[i]<=lmin){
+			pvt[i]++;
+			lmin = data[i];
+		}
+	}
+
+	printf("\nDesire Items location are (bese index from 0): ");
+	for(i=0;i<n;i++){
+		if(pvt[i]==2){
+			printf("%d, ",i);
+		}
+	}
+	printf("\b\n");
+}
