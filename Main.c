@@ -1,5 +1,5 @@
 #include "Algo.c"
-
+//TEST FILE
 int run(){
 	debug = TRUE;
 	// struct node* head;
@@ -46,9 +46,44 @@ int run(){
 	// print_array(price,10);
 	// find_best_buy_sell_day_for_stock(price,10);
 
-	int data[10]; 
-	getFilledArray(INPUT_STD,data,9);
-	print_array(data,9);
-	find_pivot_element(data,9);
+	// int data[10]; 
+	// getFilledArray(INPUT_STD,data,9);
+	// print_array(data,9);
+	// find_pivot_element(data,9);
+
+	// array_2d_row = 4;
+	// array_2d_col = 4;
+	// int data[array_2d_row][array_2d_col]; 
+	// getFilled2DArray(INPUT_AUTO,data);
+	// print_2Darray(data);
+	// print_2d_array_diagonally(data);
+
+	// struct node* stack = create_stack();
+	// stack = push(stack,10);
+	// stack = push(stack,15);
+	// print_linked_list(stack);
+	// int data;
+	// stack = pop(stack,&data);
+	// print_linked_list(stack);
+	// printf("\nPoped Data is: %d",data);
+
+	// struct node* queue = create_stack();
+	// queue = enqueue_queue_using_stack(queue,10);
+	// queue = enqueue_queue_using_stack(queue,20);
+	// print_linked_list(queue);
+	// int data;
+
+	// dequeue_queue_using_stack(queue,&data);
+	// printf("\nDequeued element: %d", data);
+	// print_linked_list(queue);
+
+	// dequeue_queue_using_stack(queue,&data);
+	// printf("\nDequeued element: %d", data);
+
+	struct node* head=NULL;
+	head = create_linked_list(INPUT_AUTO,20);
+	print_linked_list(head);
+	suffle_linked_list_by_extreme_end(head,head);
+	print_linked_list(head);
 	return 0;
 }

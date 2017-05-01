@@ -18,6 +18,10 @@ int debug = 0;
 #define AESC 1
 #define DESC 0
 
+
+//Direction
+#define UP 1
+#define DOWN 0
 //AUTO increment number
 int autoInc;
 
@@ -32,7 +36,7 @@ int main(){
 	srand(time(NULL));
 	printf("\n\n\n\n\n\n\n\n\n\n-------------------------------------\nNishantSoft v0.1\nC/C++ Pre compiled Data Structure & Algorithm\nnishant.soft04@gmail.com\nStarted\n-------------------------------------\n\n\n\n");
 	ret = run();	//user need to do the task in run(), instead of main
-	printf("\n\n\n\n-------------------------------------\nSystem is Exiting\nNishantSoft v0.1\n-------------------------------------\n\n\n\n\n\n\n\n\n\nPress Any Key To Continue...");
+	printf("\n\n\n\n-------------------------------------\nSystem is Exiting\nNishantSoft v0.1\n-------------------------------------\n\n\n\n\n\n\n\n\n\nPress Any Key To Continue . . .");
 	scanf("%c",&c);
 	return ret;
 }
@@ -81,6 +85,12 @@ int getData(int input_source){
 
 void getFilledArray(int input_source,int arr[], int size){
 	int i;
+	if(input_source = INPUT_STD){
+		printf("Enter Array Elements (integer, size:%d):\n",size);	
+	}else{
+		printf("Generating Array Elements (integer, size:%d). . .\n",size);
+	}
+	
 	for(i=0;i<size;i++){
 		arr[i] = getData(input_source);
 	}
@@ -97,6 +107,81 @@ void print_array(int arr[], int n){
 		}
 	}
 }
+
+int array_2d_row = 10;
+int array_2d_col = 10;
+void getFilled2DArray(int input_source,int arr[array_2d_row][array_2d_col]){
+	int i,j;
+	int row = array_2d_row, col = array_2d_col;
+	if(input_source == INPUT_STD){
+		printf("Enter 2D Array Elements (integer, size:%d):\n",row*col);	
+	}else{
+		printf("Generating 2D Array Elements (integer, size:%d). . .\n",row*col);
+	}
+	
+	for(i=0;i<row;i++){
+		for(j=0;j<col;j++){
+			arr[i][j] = getData(input_source);
+		}
+	}
+}
+
+void print_2Darray(int arr[array_2d_row][array_2d_col]){
+	int i, row = array_2d_row, col = array_2d_col;
+	printf("2D Array: \n\n");
+	for(i=0;i<row;i++){
+		for(int j=0;j<col;j++){
+			printf("%d ",arr[i][j]);
+		}
+		printf("\n\n");
+	}
+}
+
+int min(int a,int b){
+	return (a>b)?b:a;
+}
+int max(int a,int b){
+	return (a>b)?a:b;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////
+//									2D array Operation										//
+//////////////////////////////////////////////////////////////////////////////////////////////
+void print_diagonal_of_2D_array(int arr[array_2d_row][array_2d_col],int row, int col, int direction){
+	
+}
+
+void _private_print_diagonal(int arr[array_2d_row][array_2d_col], int i){
+	int lmin;
+	int n = array_2d_row-1;
+	if(i%2 == 0){
+		lmin = min(n,i);
+		if(lmin == i){
+			print_diagonal_of_2D_array(arr, 0, i, DOWN);
+		}else{
+			print_diagonal_of_2D_array(arr, i-n, n, DOWN);
+		}
+	}else{
+		lmin = min(n,i);
+		if(lmin == i){
+			print_diagonal_of_2D_array(arr, i, 0, UP);
+		}else{
+			print_diagonal_of_2D_array(arr, n, i-n, UP);
+		}
+	}
+}
+
+void print_2d_array_diagonally(int arr[array_2d_row][array_2d_col]){
+	//iff row==col
+	int row = array_2d_row, col = array_2d_col;
+	int diagonal = 2*row - 1;
+	printf("\nPrining 2D Array Diagonally:\n\n");
+	for(int i=0; i<diagonal;i++){
+		_private_print_diagonal(arr,i);
+	}
+}
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////
 //									LINKED LIST												//
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -398,4 +483,91 @@ void find_pivot_element(int data[],int n){
 		}
 	}
 	printf("\b\n");
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//									Minimum No of SWAP to make pair							//
+//////////////////////////////////////////////////////////////////////////////////////////////
+int _private_update_index(int index[],int a,int na, int b, int nb){
+	index[a] = na;
+	index[b] = nb;
+}
+int _private_swap_array_element(int arr[],int position_a, int position_b){
+	int temp = arr[position_b];
+	arr[position_b] = arr[position_a];
+	arr[position_a] = temp;
+}
+// int no_of_swap_to_arrange_in_pair(int pair[],int random_order[],int nPair){
+// 	int index[2*n+1];
+// 	for(int i=1;i<2*n+1;i++){
+// 		index[random_order[i]] = i;
+// 	}
+// 	for(int j=1;j<2*n+1;j=j+2){
+// 		if(pair[random_order[j]] != random_order[j+1]){
+// 			swap(random_order,j+1,index[pair[j]]);
+// 			_private_update_index(index,)
+// 		}
+// 	}
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//									Stack using linked_list									//
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+struct node* create_stack(){
+	return create_linked_list(INPUT_AUTO,0);
+}
+
+struct node* push(struct node* stack, int data){
+	struct node* newNode = create_node(data);
+	newNode->next = stack;
+	return newNode;
+}
+
+struct node* pop(struct node* stack, int *data){
+	*data = stack->value;
+	struct node* temp = stack;
+	stack = stack->next;
+	free(temp);
+	return stack;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//									Queue using single stack								//
+//////////////////////////////////////////////////////////////////////////////////////////////
+struct node* enqueue_queue_using_stack(struct node* stack, int data){
+	return push(stack,data);
+}
+
+struct node* dequeue_queue_using_stack(struct node* stack, int *data){
+	if(stack == NULL){
+		return NULL;
+	}
+	if(stack->next != NULL){
+		if(dequeue_queue_using_stack(stack->next,data) == NULL){
+			stack->next = NULL;
+		}
+		return stack;
+	}else{
+		*data = stack->value;
+		return NULL;
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////////////
+//									Print LinkedList Extreme End							//
+//////////////////////////////////////////////////////////////////////////////////////////////
+struct node* suffle_linked_list_by_extreme_end(struct node* head, struct node* end){
+	if(end->next != NULL){
+		head = suffle_linked_list_by_extreme_end(head,end->next);
+	}
+	if(head == NULL){
+		return NULL;
+	}
+	if(head->next == end){
+		end->next = NULL; 
+		return NULL;
+	}
+	end->next = head->next;
+	head->next = end;
+	return head->next->next;
 }
