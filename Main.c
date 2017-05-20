@@ -27,11 +27,12 @@ int run(){
 	// printf("\nTesting for Sorted: %s\n", (is_sorted_linked_list(head,DESC))==0?"YES":"NO");
 	// print_extreme_end_linked_list(head);
 
-	// struct tree_node* tree =  create_tree(INPUT_AUTO,3);
-	// print_tree_in_order(tree);
-	// print_tree_pre_order(tree);
-	// print_tree_post_order(tree);
-	// print_tree_level_wise(tree);
+	struct tree_node* tree =  create_tree(INPUT_STD,2);
+	print_tree_in_order(tree);
+	print_tree_pre_order(tree);
+	print_tree_post_order(tree);
+	//// print_tree_level_wise(tree);
+	printf("\nMax Diff ancestor: %d",max_diff_tree_node_and_its_ancestors(tree));
 	
 	// struct queue* q = create_queue();
 	// enqueue(q,10); enqueue(q,20); enqueue(q,30); enqueue(q,40);
@@ -80,10 +81,10 @@ int run(){
 	// dequeue_queue_using_stack(queue,&data);
 	// printf("\nDequeued element: %d", data);
 
-	struct node* head=NULL;
-	head = create_linked_list(INPUT_AUTO,20);
-	print_linked_list(head);
-	suffle_linked_list_by_extreme_end(head,head);
-	print_linked_list(head);
+	// struct node* head=NULL;
+	// head = create_linked_list(INPUT_AUTO,20);
+	// print_linked_list(head);
+	// suffle_linked_list_by_extreme_end(head,head);
+	// print_linked_list(head);
 	return 0;
 }

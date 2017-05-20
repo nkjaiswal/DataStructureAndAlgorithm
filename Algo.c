@@ -571,3 +571,24 @@ struct node* suffle_linked_list_by_extreme_end(struct node* head, struct node* e
 	head->next = end;
 	return head->next->next;
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//									Max Diffrence in Tree node and its ancestors			//
+//////////////////////////////////////////////////////////////////////////////////////////////
+int _private_max_diff_tree_node_and_its_ancestors(struct tree_node* root, int maxv, int diff){
+	if(root == NULL){
+		return INT_MIN;
+	}
+	int sol = max(maxv - root->value, diff);
+	maxv = max(maxv, root->value);
+	// printf("\nRoot:%d, MAXV:%d, SOL:%d",root->value,maxv,sol);
+	int final_sol = max(
+			_private_max_diff_tree_node_and_its_ancestors(root->left,maxv,sol),
+			_private_max_diff_tree_node_and_its_ancestors(root->right,maxv,sol)
+		);
+	return max(final_sol,sol);
+}
+int max_diff_tree_node_and_its_ancestors(struct tree_node* root){
+	return _private_max_diff_tree_node_and_its_ancestors(root,root->value,INT_MIN);
+}
+
