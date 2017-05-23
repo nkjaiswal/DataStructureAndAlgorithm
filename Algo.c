@@ -9,6 +9,9 @@ int debug = 0;
 #define INPUT_STD 1
 #define INPUT_RND 2
 #define INPUT_AUTO 3
+#define INPUT_RND_SMALL 4
+#define INPUT_RND_MEDIUM 5
+#define INPUT_RND_LARGE 6
 
 //Boolean
 #define FALSE 0
@@ -79,6 +82,12 @@ int getData(int input_source){
 		val = rand();
 	}else if(input_source == INPUT_AUTO){
 		return autoInc++;
+	}else if(input_source == INPUT_RND_SMALL){
+		val = rand()%100;
+	}else if(input_source == INPUT_RND_MEDIUM){
+		val = rand()%10000;
+	}else if(input_source == INPUT_RND_LARGE){
+		val = rand()%1000000;
 	}
 	return val;
 }
@@ -142,6 +151,14 @@ int min(int a,int b){
 }
 int max(int a,int b){
 	return (a>b)?a:b;
+}
+
+void line(char c[]){
+	printf("\n");
+	for(int i=0;i<30;i++){
+		printf("%s",c);
+	}
+	printf("\n");
 }
 //////////////////////////////////////////////////////////////////////////////////////////////
 //									2D array Operation										//
@@ -591,4 +608,34 @@ int _private_max_diff_tree_node_and_its_ancestors(struct tree_node* root, int ma
 int max_diff_tree_node_and_its_ancestors(struct tree_node* root){
 	return _private_max_diff_tree_node_and_its_ancestors(root,root->value,INT_MIN);
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////////
+//						Max sum in 2D array Left-Top Corner to Right-Bottom Corner			//
+//////////////////////////////////////////////////////////////////////////////////////////////
+int getMaxSum(int mat[array_2d_row][array_2d_col],int row,int col){
+	int val = mat[row][col];
+	int val1=INT_MIN, val2=INT_MIN;
+	int isFirst = TRUE;
+	if(row>0){
+		isFirst = FALSE;
+		val1 = val + mat[row-1][col];
+	}
+	if(col>0){
+		isFirst = FALSE;
+		val2 = val + mat[row][col-1];
+	}
+	if(isFirst){
+		return mat[row][col];
+	}
+	return max(val1,val2);
+}
+void _private_max_sum_extreme_corner(int mat[array_2d_row][array_2d_col]){
+	for(int i=0;i<array_2d_row;i++){
+		for(int j=0;j<array_2d_col;j++){
+			mat[i][j] = getMaxSum(mat,i,j);
+		}
+	}
+}
+int max_sum_extreme_corner(int mat[array_2d_row][array_2d_col]){
+	_private_max_sum_extreme_corner(mat);
+	return mat[array_2d_row-1][array_2d_col-1];
+}

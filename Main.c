@@ -27,12 +27,12 @@ int run(){
 	// printf("\nTesting for Sorted: %s\n", (is_sorted_linked_list(head,DESC))==0?"YES":"NO");
 	// print_extreme_end_linked_list(head);
 
-	struct tree_node* tree =  create_tree(INPUT_STD,2);
-	print_tree_in_order(tree);
-	print_tree_pre_order(tree);
-	print_tree_post_order(tree);
-	//// print_tree_level_wise(tree);
-	printf("\nMax Diff ancestor: %d",max_diff_tree_node_and_its_ancestors(tree));
+	// struct tree_node* tree =  create_tree(INPUT_STD,2);
+	// print_tree_in_order(tree);
+	// print_tree_pre_order(tree);
+	// print_tree_post_order(tree);
+	// //// print_tree_level_wise(tree);
+	// printf("\nMax Diff ancestor: %d",max_diff_tree_node_and_its_ancestors(tree));
 	
 	// struct queue* q = create_queue();
 	// enqueue(q,10); enqueue(q,20); enqueue(q,30); enqueue(q,40);
@@ -52,11 +52,14 @@ int run(){
 	// print_array(data,9);
 	// find_pivot_element(data,9);
 
-	// array_2d_row = 4;
-	// array_2d_col = 4;
-	// int data[array_2d_row][array_2d_col]; 
-	// getFilled2DArray(INPUT_AUTO,data);
-	// print_2Darray(data);
+	array_2d_row = 3;
+	array_2d_col = 3;
+	int data[array_2d_row][array_2d_col]; 
+	getFilled2DArray(INPUT_RND_SMALL,data);
+	print_2Darray(data);
+	line("-NKJ-");
+	max_sum_extreme_corner(data);
+	print_2Darray(data);
 	// print_2d_array_diagonally(data);
 
 	// struct node* stack = create_stack();
