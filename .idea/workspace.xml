@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3691b414-28e8-4a2a-9c7e-6b48e482e409" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/AlienDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/AlienDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AmazonOrderSorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/AmazonOrderSorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AmazonPrimeShipping.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/AmazonPrimeShipping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Amz1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/Amz1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Amz2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/Amz2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GE1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/GE1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GEPagination.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/GEPagination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GasStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/GasStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LLBinaryToDecimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/LLBinaryToDecimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LongestIncreasingSequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/LongestIncreasingSequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LongestPalindromeSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/LongestPalindromeSubsequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/Main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatchPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/MatchPattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaxNoOfPerfectSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/MaxNoOfPerfectSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaxReactangularAreaUnderHisttrogram.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/MaxReactangularAreaUnderHisttrogram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PotsOfGold.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/PotsOfGold.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmallestNoWithSameNoOfDigits.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/SmallestNoWithSameNoOfDigits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SortStringDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/SortStringDates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StringPartition.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/StringPartition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visa.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/Visa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visa2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/Visa2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visa3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/Visa3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WaysToReachBottomRightCornerInKTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/WaysToReachBottomRightCornerInKTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeekHashMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/WeekHashMapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeightedJobScheduling.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/WeightedJobScheduling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/src/run.bat" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1gRk1TbYRQG2Aoeok7MwsLQkqrK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Algorithm/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3691b414-28e8-4a2a-9c7e-6b48e482e409" name="Default Changelist" comment="" />
+      <created>1598084576634</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598084576634</updated>
+      <workItem from="1598084578805" duration="104000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="490" y="296" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1598084637947">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="490" y="296" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.800@0.0.1280.800" timestamp="1598084637947" />
+  </component>
+</project>

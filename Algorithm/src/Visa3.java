@@ -41,7 +41,7 @@ class SinglyLinkedListNode{
 
     SinglyLinkedListNode next;
 
-    @Override
+
     public String toString() {
         return data + "->" + next;
     }

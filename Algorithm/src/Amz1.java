@@ -39,7 +39,7 @@ import java.util.List;
 class Data{
 	Double distance;
 	List<Integer> sol;
-	@Override
+
 	public String toString() {
 		return "Data [distance=" + distance + ", sol=" + sol + "]";
 	}
